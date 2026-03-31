@@ -4,45 +4,24 @@
     "slug": "f1-widget-app",
     "scheme": "f1widget",
     "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "plugins": [
-      "expo-router",
-      "expo-widgets"
-    ],
+    "platforms": ["ios", "android"],
+    "plugins": ["expo-router"],
     "ios": {
-      "bundleIdentifier": "com.yourname.f1widget",
-      "supportsTablet": false
+      "bundleIdentifier": "com.hexajs.f1widget",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
-      "package": "com.yourname.f1widget",
+      "package": "com.hexajs.f1widget",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#E10600"
       }
     },
     "extra": {
       "router": {},
       "eas": {
-        "build": {
-          "experimental": {
-            "ios": {
-              "appExtensions": [
-                {
-                  "targetName": "ExpoWidgetsTarget",
-                  "bundleIdentifier": "com.yourname.f1widget.ExpoWidgetsTarget",
-                  "entitlements": {
-                    "com.apple.security.application-groups": [
-                      "group.com.yourname.f1widget"
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        },
         "projectId": "e46b1bb2-268c-4e33-a8a0-b8cc8aaa7552"
       }
     }
